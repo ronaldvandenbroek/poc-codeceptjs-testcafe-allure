@@ -2,9 +2,9 @@
   "name": "poc-codeceptjs-testcafe-allure",
   "version": "0.0.1",
   "description": "A proof of concept testing the coupling between CodeceptJS, TestCafé and Allure.",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "test": "npx codeceptjs run --steps"
+    "test": "npx codeceptjs run --steps --plugins allure"
   },
   "keywords": [],
   "author": "Ronald van den Broek",

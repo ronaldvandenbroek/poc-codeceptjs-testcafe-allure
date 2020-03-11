@@ -2,6 +2,8 @@
  A proof of concept testing the coupling between CodeceptJS, TestCafé and Allure.
  
  https://codecept.io/quickstart/
+ https://codecept.io/testcafe/
+
  npm init -y
  npm install codeceptjs testcafe --save-dev
  npx codeceptjs init
@@ -20,7 +22,16 @@
  Run tests:
  npm run test
 
- https://codecept.io/testcafe/
-
- 
  https://codecept.io/plugins/#allure
+
+ npm install -g allure-commandline --save-dev
+
+ Edit the package.json test script:
+ "scripts": {
+    "test": "npx codeceptjs run --steps --plugins allure"
+  },
+
+ Run tests:
+ npm run test
+
+ allure serve output
