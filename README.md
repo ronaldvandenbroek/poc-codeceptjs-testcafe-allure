@@ -1,37 +1,66 @@
 # poc-codeceptjs-testcafe-allure
  A proof of concept testing the coupling between CodeceptJS, TestCafé and Allure.
  
- https://codecept.io/quickstart/
- https://codecept.io/testcafe/
-
- npm init -y
- npm install codeceptjs testcafe --save-dev
- npx codeceptjs init
+ ## Setup
+ ### CodeceptJS with TestCafé helper 
+ [Quickstart](https://codecept.io/quickstart/) - [TestCafé tutorial]( https://codecept.io/testcafe/)
+ 
+ Install CodeceptJS and TestCafé: 
+ 
+ `npm install codeceptjs testcafe --save-dev`
+ 
+ Initialize CodeceptJS, all options were kept default except of those listed below:
+ 
+ `npx codeceptjs init
     Select TestCafé as helper
-    Browser to be used: firefox
-    Show browser window: y
- npx codeceptjs gt
-    Feature being tested: poc
- npx codeceptjs run --steps
+    Browser to be used: firefox`
+ 
+ Generate a test:
+ 
+ `npx codeceptjs gt
+    Feature being tested: poc`
+ 
+ Run the tests:
+ 
+ `npx codeceptjs run --steps`
 
+ #### Optional
  Add the following to the package.json test script:
+ 
+  ```
   "scripts": {
     "test": "npx codeceptjs run --steps"
-  },
+  }
+  ```
+  
+ Run the tests:
+ 
+ `npm run test`
+
+### Adding the Allure plugin
+[Allure tutorial](https://codecept.io/plugins/#allure)
+ 
+ Install the Allure commandline used to generate and serve the report (currently only works when installed globally):
+ 
+ `npm install -g allure-commandline --save-dev`
+ 
+ Run the tests:
+ 
+ `npx codeceptjs run --steps --plugins allure`
+ 
+ Serve the Allure report:
+ 
+ `allure serve output`
+
+#### Optional
+ Edit the package.json test script:
+ 
+ ```
+ "scripts": {
+    "test": "npx codeceptjs run --steps --plugins allure && allure serve output"
+  } 
+  ```
   
  Run tests:
- npm run test
-
- https://codecept.io/plugins/#allure
-
- npm install -g allure-commandline --save-dev
-
- Edit the package.json test script:
- "scripts": {
-    "test": "npx codeceptjs run --steps --plugins allure"
-  },
-
- Run tests:
- npm run test
-
- allure serve output
+ 
+ `npm run test`
