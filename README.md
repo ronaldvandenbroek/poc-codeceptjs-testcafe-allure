@@ -64,3 +64,13 @@
  Run tests:
  
  `npm run test`
+
+
+### Mutiple browsers execution
+[Tutorial](https://codecept.io/parallel/#multiple-browsers-execution)
+
+Run the tests:
+
+`npx codeceptjs run-multiple basic --steps --plugins allure`
+
+`// TODO: run-multiple seems to get stuck at Emitted | global.after ([object Object])`
