@@ -8,7 +8,18 @@
     Select TestCafé as helper
     Browser to be used: firefox
     Show browser window: y
- 
+ npx codeceptjs gt
+    Feature being tested: poc
+ npx codeceptjs run --steps
+
+ Add the following to the package.json test script:
+  "scripts": {
+    "test": "npx codeceptjs run --steps"
+  },
+  
+ Run tests:
+ npm run test
+
  https://codecept.io/testcafe/
  
  https://codecept.io/plugins/#allure
