@@ -1,6 +1,6 @@
 Feature('poc');
 
-Scenario('test something', (I) => {
+Scenario('visit github', (I) => {
     I.amOnPage('https://github.com');
     I.see('GitHub');
   });
