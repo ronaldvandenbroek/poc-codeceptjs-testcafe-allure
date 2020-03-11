@@ -11,7 +11,7 @@ exports.config = {
     TestCafe: {
       url: 'http://localhost',
       browser: 'firefox',
-      show: true
+      show: false
     }
   },
   include: {

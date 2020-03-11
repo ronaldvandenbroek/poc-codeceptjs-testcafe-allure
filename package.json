@@ -4,7 +4,8 @@
   "description": "A proof of concept testing the coupling between CodeceptJS, TestCafé and Allure.",
   "main": "",
   "scripts": {
-    "test": "npx codeceptjs run --steps --plugins allure"
+    "test": "npx codeceptjs run --steps --plugins allure",
+    "test:serve": "npx codeceptjs run --steps --plugins allure && allure serve ./output"
   },
   "keywords": [],
   "author": "Ronald van den Broek",
