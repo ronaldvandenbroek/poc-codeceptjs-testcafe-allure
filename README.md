@@ -11,14 +11,18 @@
  
  Initialize CodeceptJS, all options were kept default except of those listed below:
  
- `npx codeceptjs init
+ ```
+ npx codeceptjs init
     Select TestCafé as helper
-    Browser to be used: firefox`
+    Browser to be used: firefox
+ ```
  
  Generate a test:
  
- `npx codeceptjs gt
-    Feature being tested: poc`
+ ```
+ npx codeceptjs gt
+    Feature being tested: poc
+ ```
  
  Run the tests:
  
@@ -57,13 +61,13 @@
  
  ```
  "scripts": {
-    "test": "npx codeceptjs run --steps --plugins allure && allure serve output"
+    "test:serve": "npx codeceptjs run --steps --plugins allure && allure serve output"
   } 
   ```
   
  Run tests:
  
- `npm run test`
+ `npm run test:serve`
 
 
 ### Mutiple browsers execution
